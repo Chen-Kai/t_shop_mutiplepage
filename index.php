@@ -49,7 +49,9 @@ $total_pages = ceil($total_records/$pageRow_records);
 		$shop_code_price = $select_ecs_goods["shop_price"];
 		if($market_code_price <=0 && $shop_code_price <=0 ){
 			$tpl->assign("price_info","<span><p id=\"img_co_price_center\">新增價格</p></span>");
-		}else{
+		}
+		else
+		{
 			$tpl->assign("price_info","<span class=\"img_co_price_left\"><P id=\"pic1text\">市價:".$select_ecs_goods["market_price"]."</P></span><span class=\"img_co_price_right\"><P id=\"pic1text\">優惠價:".$select_ecs_goods["shop_price"]."</P></span>");
 		}	
 		$tpl->assign("sho_img_url","http://192.168.1.235/".$select_ecs_goods["goods_thumb"]);
